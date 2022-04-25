@@ -75,7 +75,7 @@ export default function SingleTabFive(props) {
                 <div className="row">
                   <div className="col-md-4">
                     <img
-                      src="images/products/single/body-shape.png"
+                      src="/images/products/single/body-shape.png"
                       alt="body shape"
                       width="217"
                       height="398"
@@ -148,7 +148,7 @@ export default function SingleTabFive(props) {
                       <div className="comments">
                         <figure className="img-thumbnail">
                           <img
-                            src="images/blog/author.jpg"
+                            src="/images/blog/author.jpg"
                             alt="author"
                             width="80"
                             height="80"

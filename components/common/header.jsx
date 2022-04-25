@@ -21,9 +21,8 @@ function Header(props) {
   return (
     <div className="header-wrapper position-relative">
       <header
-        className={`header ${
-          router.pathname === "/" ? "position-absolute" : "elements-header"
-        } ${adClass}`}
+        className={`header ${router.pathname === "/" ? "position-absolute" : "elements-header"
+          } ${adClass}`}
       >
         <div className="header-top">
           <div className="container d-flex">

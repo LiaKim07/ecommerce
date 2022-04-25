@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import {useState, useEffect} from "react";
+import {useRouter} from "next/router";
 
 import ALink from "../../components/common/ALink";
 import ShopBanner from "../../components/partials/shop/shop-banner";
@@ -35,7 +35,7 @@ function Shop() {
         58;
 
       setTimeout(() => {
-        window.scrollTo({ top: offset, behavior: "smooth" });
+        window.scrollTo({top: offset, behavior: "smooth"});
       }, 200);
     }
     let page = query.page ? query.page : 1;
@@ -53,7 +53,6 @@ function Shop() {
       index: false,
       demo: 12,
     });
-
     getProducts(urlParam);
   }, [query, perPage, sortBy]);
 
@@ -93,7 +92,6 @@ function Shop() {
   if (loading) {
     return <div>Loading....</div>;
   }
-
   return (
     <main className="main">
       <ShopBanner />
@@ -109,30 +107,26 @@ function Shop() {
             {query.category ? (
               <>
                 <li className="breadcrumb-item">
-                  <ALink href={{ query: {} }} scroll={false}>
+                  <ALink href={{query: {}}} scroll={false}>
                     shop
                   </ALink>
                 </li>
-                {restData &&
-                  restData.products.categoryFamily.map((item, index) => (
-                    <li
-                      className="breadcrumb-item"
-                      key={`category-family-${index}`}
-                    >
-                      <ALink
-                        href={{ query: { category: item.slug } }}
-                        scroll={false}
-                      >
-                        {item.name}
-                      </ALink>
-                    </li>
-                  ))}
+                {products.map((item, index) => (
+                  <li
+                    className="breadcrumb-item"
+                    key={`category-family-${index}`}
+                  >
+                    <ALink href={{query: {category: item.slug}}} scroll={false}>
+                      {item.name}
+                    </ALink>
+                  </li>
+                ))}
                 <li className="breadcrumb-item active">
                   {query.search ? (
                     <>
                       Search -{" "}
                       <ALink
-                        href={{ query: { category: query.category } }}
+                        href={{query: {category: query.category}}}
                         scroll={false}
                       >
                         {query.category}
@@ -147,7 +141,7 @@ function Shop() {
             ) : query.search ? (
               <>
                 <li className="breadcrumb-item">
-                  <ALink href={{ query: {} }} scroll={false}>
+                  <ALink href={{query: {}}} scroll={false}>
                     Shop
                   </ALink>
                 </li>
@@ -159,7 +153,7 @@ function Shop() {
             ) : query.tag ? (
               <>
                 <li className="breadcrumb-item">
-                  <ALink href={{ query: {} }} scroll={false}>
+                  <ALink href={{query: {}}} scroll={false}>
                     Shop
                   </ALink>
                 </li>
@@ -183,7 +177,7 @@ function Shop() {
                 <a
                   href="#"
                   className="sidebar-toggle"
-                  onClick={(e) => sidebarToggle(e)}
+                  onClick={e => sidebarToggle(e)}
                 >
                   <svg
                     data-name="Layer 3"
@@ -255,7 +249,7 @@ function Shop() {
                       name="orderby"
                       className="form-control"
                       value={sortBy}
-                      onChange={(e) => onSortByChange(e)}
+                      onChange={e => onSortByChange(e)}
                     >
                       <option value="default">Default sorting</option>
                       <option value="popularity">Sort by popularity</option>
@@ -279,7 +273,7 @@ function Shop() {
                       name="count"
                       className="form-control"
                       value={perPage}
-                      onChange={(e) => onPerPageChange(e)}
+                      onChange={e => onPerPageChange(e)}
                     >
                       <option value="12">12</option>
                       <option value="24">24</option>
@@ -290,14 +284,14 @@ function Shop() {
 
                 <div className="toolbox-item layout-modes">
                   <ALink
-                    href={{ pathname: router.pathname, query: query }}
+                    href={{pathname: router.pathname, query: query}}
                     className="layout-btn btn-grid active"
                     title="Grid"
                   >
                     <i className="icon-mode-grid"></i>
                   </ALink>
                   <ALink
-                    href={{ pathname: "/shop/list", query: query }}
+                    href={{pathname: "/shop/list", query: query}}
                     className="layout-btn btn-list"
                     title="List"
                   >
@@ -323,7 +317,7 @@ function Shop() {
                       name="count"
                       className="form-control"
                       value={perPage}
-                      onChange={(e) => onPerPageChange(e)}
+                      onChange={e => onPerPageChange(e)}
                     >
                       <option value="12">12</option>
                       <option value="24">24</option>

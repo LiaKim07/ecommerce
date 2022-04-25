@@ -10,6 +10,7 @@ import qs from "qs";
 
 function Home({ data, loading }) {
   //   const { restData, loading } = useFetch("/products?demo=12");
+
   //   const { data, loading, error } = useQuery(GET_HOME_DATA, {
   //     variables: { productsCount: 5 },
   //   });

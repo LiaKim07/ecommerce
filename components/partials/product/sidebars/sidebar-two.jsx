@@ -85,7 +85,7 @@ function ProductSidebarTwo(props) {
                 <figure className="mega-image">
                   <LazyLoadImage
                     alt="banner"
-                    src="images/banners/banner-sidebar.jpg"
+                    src="/images/banners/banner-sidebar.jpg"
                     threshold={500}
                     effect="blur"
                     width={100}
@@ -122,17 +122,17 @@ function ProductSidebarTwo(props) {
                 <div className="featured-col">
                   {loading
                     ? [0, 1, 2].map((item, index) => (
-                        <div
-                          className="skel-product-col skel-pro mb-2"
-                          key={"product-one" + index}
-                        ></div>
-                      ))
+                      <div
+                        className="skel-product-col skel-pro mb-2"
+                        key={"product-one" + index}
+                      ></div>
+                    ))
                     : restData.shopSidebarData.featured.map((item, index) => (
-                        <ProductThree
-                          product={item}
-                          key={"product-three" + index}
-                        />
-                      ))}
+                      <ProductThree
+                        product={item}
+                        key={"product-three" + index}
+                      />
+                    ))}
                 </div>
 
                 <div className="featured-col">

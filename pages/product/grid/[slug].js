@@ -9,7 +9,7 @@ import ProductWidgetContainer from "../../../components/partials/product/widgets
 import absoluteUrl from "next-absolute-url";
 import qs from "qs";
 
-function ProductGrid({ slug, data, loading }) {
+function ProductGrid({slug, data, loading}) {
   if (!slug || loading)
     return (
       <div className="loading-overlay">
@@ -24,7 +24,9 @@ function ProductGrid({ slug, data, loading }) {
   const product = !loading && data.product.data;
   const related = !loading && data.product.related;
 
-
+  //   if (error) {
+  //     return useRouter().push("/pages/404");
+  //   }
 
   return (
     <main className="main">
@@ -50,7 +52,7 @@ function ProductGrid({ slug, data, loading }) {
                     <ALink
                       href={{
                         pathname: "/shop",
-                        query: { category: item.slug },
+                        query: {category: item.slug},
                       }}
                     >
                       {item.name}
@@ -93,8 +95,8 @@ function ProductGrid({ slug, data, loading }) {
 
 export default ProductGrid;
 export async function getServerSideProps(ctx) {
-  const { origin } = absoluteUrl(ctx.req);
-  const { slug } = ctx.query;
+  const {origin} = absoluteUrl(ctx.req);
+  const {slug} = ctx.query;
   const params = qs.stringify({
     demo: 12,
     slug: slug,

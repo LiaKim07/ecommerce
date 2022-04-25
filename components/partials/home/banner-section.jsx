@@ -9,7 +9,7 @@ function BannerSection() {
       <div className="banners-grid grid">
         <div className="banner banner-1 grid-item">
           <figure>
-            <img src="images/home/banners/banner-1.jpg" alt="banner" />
+            <img src="/images/home/banners/banner-1.jpg" alt="banner" />
           </figure>
 
           <div className="banner-layer banner-layer-middle">
@@ -36,7 +36,7 @@ function BannerSection() {
 
         <div className="banner banner-2 grid-item">
           <figure>
-            <img src="images/home/banners/banner-2.jpg" alt="banner" />
+            <img src="/images/home/banners/banner-2.jpg" alt="banner" />
           </figure>
 
           <div className="banner-layer banner-layer-middle d-flex align-items-end flex-column">
@@ -67,7 +67,7 @@ function BannerSection() {
 
         <div className="banner banner-3 grid-item">
           <figure>
-            <img src="images/home/banners/banner-3.jpg" alt="banner" />
+            <img src="/images/home/banners/banner-3.jpg" alt="banner" />
           </figure>
 
           <div className="banner-layer banner-layer-top text-center">
@@ -86,7 +86,7 @@ function BannerSection() {
 
         <div className="banner banner-4 grid-item">
           <figure>
-            <img src="images/home/banners/banner-4.jpg" alt="banner" />
+            <img src="/images/home/banners/banner-4.jpg" alt="banner" />
           </figure>
 
           <div className="banner-layer banner-layer-middle d-flex justify-content-between flex-wrap align-items-center">
@@ -110,7 +110,7 @@ function BannerSection() {
 
         <div className="banner banner-5 grid-item">
           <figure>
-            <img src="images/home/banners/banner-5.jpg" alt="banner" />
+            <img src="/images/home/banners/banner-5.jpg" alt="banner" />
           </figure>
 
           <div className="container">
@@ -191,7 +191,7 @@ function BannerSection() {
           <div className="banner-layer banner-layer-middle banner-layer-right text-center">
             <div className="row mb-lg-4 mb-2">
               <div className="col-4">
-                <img src="images/home/brands/brand-1.png" alt="brand" />
+                <img src="/images/home/brands/brand-1.png" alt="brand" />
               </div>
 
               <div className="col-4">

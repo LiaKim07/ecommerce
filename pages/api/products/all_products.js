@@ -22,6 +22,6 @@ export default async function handler(req, res) {
      *  list: Boolean = false
      */
     const result = await resolvers.products(req.query);
-    return res.json({ products: result });
+    return res.json({products: result});
   }
 }

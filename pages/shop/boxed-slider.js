@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import {useRouter} from "next/router";
+import {useState, useEffect} from "react";
 import ALink from "../../components/common/ALink";
 import ShopSidebarOne from "../../components/partials/shop/sidebar/shop-sidebar-one";
 import Pagination from "../../components/features/pagination";
@@ -32,7 +32,7 @@ function ShopboxedSlider() {
         window.pageYOffset -
         58;
       setTimeout(() => {
-        window.scrollTo({ top: offset, behavior: "smooth" });
+        window.scrollTo({top: offset, behavior: "smooth"});
       }, 200);
     }
     let page = query.page ? query.page : 1;
@@ -108,7 +108,7 @@ function ShopboxedSlider() {
             {query.category ? (
               <>
                 <li className="breadcrumb-item">
-                  <ALink href={{ query: {} }} scroll={false}>
+                  <ALink href={{query: {}}} scroll={false}>
                     shop
                   </ALink>
                 </li>
@@ -119,7 +119,7 @@ function ShopboxedSlider() {
                       key={`category-family-${index}`}
                     >
                       <ALink
-                        href={{ query: { category: item.slug } }}
+                        href={{query: {category: item.slug}}}
                         scroll={false}
                       >
                         {item.name}
@@ -131,7 +131,7 @@ function ShopboxedSlider() {
                     <>
                       Search -{" "}
                       <ALink
-                        href={{ query: { category: query.category } }}
+                        href={{query: {category: query.category}}}
                         scroll={false}
                       >
                         {query.category}
@@ -146,7 +146,7 @@ function ShopboxedSlider() {
             ) : query.search ? (
               <>
                 <li className="breadcrumb-item">
-                  <ALink href={{ query: {} }} scroll={false}>
+                  <ALink href={{query: {}}} scroll={false}>
                     Shop
                   </ALink>
                 </li>
@@ -158,7 +158,7 @@ function ShopboxedSlider() {
             ) : query.tag ? (
               <>
                 <li className="breadcrumb-item">
-                  <ALink href={{ query: {} }} scroll={false}>
+                  <ALink href={{query: {}}} scroll={false}>
                     Shop
                   </ALink>
                 </li>
@@ -185,12 +185,12 @@ function ShopboxedSlider() {
             >
               <div
                 className="boxed-slide boxed-slide-1"
-                style={{ backgroundColor: "#9ee3f2" }}
+                style={{backgroundColor: "#9ee3f2"}}
               >
                 <figure>
                   <img
                     className="slide-bg"
-                    src="images/banners/banner-fashion-1.jpg"
+                    src="/images/banners/banner-fashion-1.jpg"
                     alt="banner"
                     width="870"
                     height="300"
@@ -211,7 +211,7 @@ function ShopboxedSlider() {
                 <figure>
                   <img
                     className="slide-bg"
-                    src="images/banners/banner-fashion-2.jpg"
+                    src="/images/banners/banner-fashion-2.jpg"
                     alt="banner"
                     width="870"
                     height="300"
@@ -235,7 +235,7 @@ function ShopboxedSlider() {
                 <a
                   href="#"
                   className="sidebar-toggle"
-                  onClick={(e) => sidebarToggle(e)}
+                  onClick={e => sidebarToggle(e)}
                 >
                   <svg
                     data-name="Layer 3"
@@ -307,7 +307,7 @@ function ShopboxedSlider() {
                       name="orderby"
                       className="form-control"
                       value={sortBy}
-                      onChange={(e) => onSortByChange(e)}
+                      onChange={e => onSortByChange(e)}
                     >
                       <option value="default">Default sorting</option>
                       <option value="popularity">Sort by popularity</option>
@@ -331,7 +331,7 @@ function ShopboxedSlider() {
                       name="count"
                       className="form-control"
                       value={perPage}
-                      onChange={(e) => onPerPageChange(e)}
+                      onChange={e => onPerPageChange(e)}
                     >
                       <option value="12">12</option>
                       <option value="24">24</option>
@@ -342,14 +342,14 @@ function ShopboxedSlider() {
 
                 <div className="toolbox-item layout-modes">
                   <ALink
-                    href={{ pathname: router.pathname, query: query }}
+                    href={{pathname: router.pathname, query: query}}
                     className="layout-btn btn-grid active"
                     title="Grid"
                   >
                     <i className="icon-mode-grid"></i>
                   </ALink>
                   <ALink
-                    href={{ pathname: "/shop/list", query: query }}
+                    href={{pathname: "/shop/list", query: query}}
                     className="layout-btn btn-list"
                     title="List"
                   >
@@ -375,7 +375,7 @@ function ShopboxedSlider() {
                       name="count"
                       className="form-control"
                       value={perPage}
-                      onChange={(e) => onPerPageChange(e)}
+                      onChange={e => onPerPageChange(e)}
                     >
                       <option value="12">12</option>
                       <option value="24">24</option>

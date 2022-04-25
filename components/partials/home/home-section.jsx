@@ -7,11 +7,11 @@ import OwlCarousel from '../../features/owl-carousel';
 // Import Settings
 import { ButtonSlider } from '../../../utils/data/slider';
 
-function HomeSection () {
+function HomeSection() {
     return (
         <section className="section-1 home-section position-relative">
             <div className="home-banner banner bg-img"
-                style={ { backgroundImage: 'url(images/home/bg-1.jpg)' } }>
+                style={{ backgroundImage: 'url(/images/home/bg-1.jpg)' }}>
                 <div className="banner-layer banner-layer-middle">
                     <h4 className="text-transform-none m-b-3">Find the Boundaries. Push Through!</h4>
                     <h2 className="text-transform-none mb-0">Summer Sale</h2>
@@ -26,18 +26,18 @@ function HomeSection () {
             </div>
 
             <div className="cat-section container position-absolute">
-                <OwlCarousel options={ ButtonSlider }>
-                    <ALink href={ { pathname: '/shop', query: { category: 'accessories-1' } } } className="btn btn-dark btn-lg">ACCESSORIES</ALink>
-                    <ALink href={ { pathname: '/shop', query: { category: 'caps' } } } className="btn btn-dark btn-lg">CAPS</ALink>
-                    <ALink href={ { pathname: '/shop', query: { category: 'dress' } } } className="btn btn-dark btn-lg">DRESS</ALink>
-                    <ALink href={ { pathname: '/shop', query: { category: 'electronics' } } } className="btn btn-dark btn-lg">ELECTRONICS</ALink>
-                    <ALink href={ { pathname: '/shop', query: { category: 'fashion' } } } className="btn btn-dark btn-lg">FASHION</ALink>
-                    <ALink href={ { pathname: '/shop', query: { category: 'headphone-3' } } } className="btn btn-dark btn-lg">HEADPHONE</ALink>
-                    <ALink href={ { pathname: '/shop', query: { category: 'accessories-1' } } } className="btn btn-dark btn-lg">ACCESSORIES</ALink>
+                <OwlCarousel options={ButtonSlider}>
+                    <ALink href={{ pathname: '/shop', query: { category: 'accessories-1' } }} className="btn btn-dark btn-lg">ACCESSORIES</ALink>
+                    <ALink href={{ pathname: '/shop', query: { category: 'caps' } }} className="btn btn-dark btn-lg">CAPS</ALink>
+                    <ALink href={{ pathname: '/shop', query: { category: 'dress' } }} className="btn btn-dark btn-lg">DRESS</ALink>
+                    <ALink href={{ pathname: '/shop', query: { category: 'electronics' } }} className="btn btn-dark btn-lg">ELECTRONICS</ALink>
+                    <ALink href={{ pathname: '/shop', query: { category: 'fashion' } }} className="btn btn-dark btn-lg">FASHION</ALink>
+                    <ALink href={{ pathname: '/shop', query: { category: 'headphone-3' } }} className="btn btn-dark btn-lg">HEADPHONE</ALink>
+                    <ALink href={{ pathname: '/shop', query: { category: 'accessories-1' } }} className="btn btn-dark btn-lg">ACCESSORIES</ALink>
                 </OwlCarousel>
             </div>
         </section>
     );
 }
 
-export default React.memo( HomeSection );
+export default React.memo(HomeSection);

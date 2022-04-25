@@ -2,13 +2,13 @@ import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ALink from '../../../common/ALink';
 
-function SingleTabTwo ( props ) {
+function SingleTabTwo(props) {
     const { adClass = "", product } = props;
 
-    function activeHandler ( e ) {
+    function activeHandler(e) {
         e.preventDefault();
-        document.querySelector( '.add-product-review .active' ) && document.querySelector( '.add-product-review .active' ).classList.remove( 'active' );
-        e.currentTarget.classList.add( 'active' );
+        document.querySelector('.add-product-review .active') && document.querySelector('.add-product-review .active').classList.remove('active');
+        e.currentTarget.classList.add('active');
     }
 
     return (
@@ -16,7 +16,7 @@ function SingleTabTwo ( props ) {
             <div className="skel-pro-tabs"></div>
             {
                 product &&
-                <Tabs className={ `product-single-tabs ${ adClass }` } selectedTabClassName="active" selectedTabPanelClassName="show">
+                <Tabs className={`product-single-tabs ${adClass}`} selectedTabClassName="active" selectedTabPanelClassName="show">
                     <TabList className="nav nav-tabs nav-border-anim">
                         <Tab className="nav-item">
                             <ALink href="#" className="nav-link">Description</ALink>
@@ -25,21 +25,21 @@ function SingleTabTwo ( props ) {
                             <ALink href="#" className="nav-link">Size Guide</ALink>
                         </Tab>
                         <Tab className="nav-item">
-                            <ALink href="#" className="nav-link">Reviews ({ product.reviews })</ALink>
+                            <ALink href="#" className="nav-link">Reviews ({product.reviews})</ALink>
                         </Tab>
                     </TabList>
 
                     <TabPanel className="tab-pane fade">
                         <div className="product-desc-content">
-                            <p>{ product.short_description }</p>
-                            <img src="images/products/single/product-img.jpg" alt="image desc" className="float-right" width="276" height="275" />
+                            <p>{product.short_description}</p>
+                            <img src="/images/products/single/product-img.jpg" alt="image desc" className="float-right" width="276" height="275" />
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                                 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                                 commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                                 velit esse cillum dolore.
-							</p>
+                            </p>
                             <ul>
                                 <li>Any Product types that You want - Simple, Configurable</li>
                                 <li>Downloadable/Digital Products, Virtual Products</li>
@@ -56,7 +56,7 @@ function SingleTabTwo ( props ) {
                                         <div className="feature-box-content">
                                             <h3>Dedicated Service</h3>
                                             <p>Consult our specialists for help with an order,
-																customization, or design advice</p>
+                                                customization, or design advice</p>
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +70,7 @@ function SingleTabTwo ( props ) {
                                         <div className="feature-box-content">
                                             <h3>Free Returns</h3>
                                             <p>Consult our specialists for help with an order,
-																customization, or design advice</p>
+                                                customization, or design advice</p>
                                         </div>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@ function SingleTabTwo ( props ) {
                                         <div className="feature-box-content">
                                             <h3>International Shipping</h3>
                                             <p>Consult our specialists for help with an order,
-																customization, or design advice</p>
+                                                customization, or design advice</p>
                                         </div>
                                     </div>
                                 </div>
@@ -101,7 +101,7 @@ function SingleTabTwo ( props ) {
                                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                                 in reprehenderit in voluptate velit esse cillum dolore.Duis aute irure
                                 dolor in reprehenderit in voluptate velit esse cillum dolore.
-							</p>
+                            </p>
                         </div>
                     </TabPanel>
 
@@ -109,7 +109,7 @@ function SingleTabTwo ( props ) {
                         <div className="product-size-content">
                             <div className="row">
                                 <div className="col-md-4">
-                                    <img src="images/products/single/body-shape.png" alt="body shape" width="217" height="398" />
+                                    <img src="/images/products/single/body-shape.png" alt="body shape" width="217" height="398" />
                                 </div>
 
                                 <div className="col-md-8">
@@ -176,7 +176,7 @@ function SingleTabTwo ( props ) {
                                         <div className="comment-list">
                                             <div className="comments">
                                                 <figure className="img-thumbnail">
-                                                    <img src="images/blog/author.jpg" alt="author" width="80"
+                                                    <img src="/images/blog/author.jpg" alt="author" width="80"
                                                         height="80" />
                                                 </figure>
 
@@ -186,8 +186,8 @@ function SingleTabTwo ( props ) {
 
                                                         <div className="ratings-container float-sm-right">
                                                             <div className="product-ratings">
-                                                                <span className="ratings" style={ { width: `${ 20 * product.ratings }%` } }></span>
-                                                                <span className="tooltiptext tooltip-top">{ product.ratings.toFixed( 2 ) }</span>
+                                                                <span className="ratings" style={{ width: `${20 * product.ratings}%` }}></span>
+                                                                <span className="tooltiptext tooltip-top">{product.ratings.toFixed(2)}</span>
                                                             </div>
                                                         </div>
 
@@ -220,11 +220,11 @@ function SingleTabTwo ( props ) {
                                         <div className="rating-form">
                                             <label htmlFor="rating">Your rating <span className="required">*</span></label>
                                             <span className="rating-stars">
-                                                <a className="star-1" href="#" onClick={ activeHandler }>1</a>
-                                                <a className="star-2" href="#" onClick={ activeHandler }>2</a>
-                                                <a className="star-3" href="#" onClick={ activeHandler }>3</a>
-                                                <a className="star-4" href="#" onClick={ activeHandler }>4</a>
-                                                <a className="star-5" href="#" onClick={ activeHandler }>5</a>
+                                                <a className="star-1" href="#" onClick={activeHandler}>1</a>
+                                                <a className="star-2" href="#" onClick={activeHandler}>2</a>
+                                                <a className="star-3" href="#" onClick={activeHandler}>3</a>
+                                                <a className="star-4" href="#" onClick={activeHandler}>4</a>
+                                                <a className="star-5" href="#" onClick={activeHandler}>5</a>
                                             </span>
                                         </div>
 
@@ -254,8 +254,8 @@ function SingleTabTwo ( props ) {
                                                     <input type="checkbox" className="custom-control-input"
                                                         id="save-name" />
                                                     <label className="custom-control-label mb-0" htmlFor="save-name">Save my
-                                                    name, email, and website in this browser for the next time I
-														comment.</label>
+                                                        name, email, and website in this browser for the next time I
+                                                        comment.</label>
                                                 </div>
                                             </div>
                                         </div>

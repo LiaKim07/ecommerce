@@ -5,13 +5,13 @@ import SlideToggle from 'react-slide-toggle';
 import ALink from '../../../common/ALink';
 import Accordion from '../../../features/accordion/accordion';
 
-function SingleTabThree ( props ) {
+function SingleTabThree(props) {
     const { product, adClass = '' } = props;
 
-    function activeHandler ( e ) {
+    function activeHandler(e) {
         e.preventDefault();
-        document.querySelector( '.add-product-review .active' ) && document.querySelector( '.add-product-review .active' ).classList.remove( 'active' );
-        e.currentTarget.classList.add( 'active' );
+        document.querySelector('.add-product-review .active') && document.querySelector('.add-product-review .active').classList.remove('active');
+        e.currentTarget.classList.add('active');
     }
 
     return (
@@ -19,18 +19,18 @@ function SingleTabThree ( props ) {
             <div className="skel-pro-tabs"></div>
             {
                 product &&
-                <Accordion adClass={ `product-single-collapse ${adClass}` }>
-                    <SlideToggle collapsed={ false }>
+                <Accordion adClass={`product-single-collapse ${adClass}`}>
+                    <SlideToggle collapsed={false}>
                         {
-                            ( { onToggle, setCollapsibleElement, toggleState } ) => (
+                            ({ onToggle, setCollapsibleElement, toggleState }) => (
                                 <div className="product-collapse-panel">
-                                    <h3 className="product-collapse-title" onClick={ onToggle }>
-                                        <ALink href="#" className={ `toggle-button ${toggleState.toLowerCase()}` }>Description</ALink>
+                                    <h3 className="product-collapse-title" onClick={onToggle}>
+                                        <ALink href="#" className={`toggle-button ${toggleState.toLowerCase()}`}>Description</ALink>
                                     </h3>
-                                    <div className="product-collapse-body" ref={ setCollapsibleElement }>
+                                    <div className="product-collapse-body" ref={setCollapsibleElement}>
                                         <div className="collapse-body-wrapper pl-0">
                                             <div className="product-desc-content">
-                                                <p>{ product && product.short_description }</p>
+                                                <p>{product && product.short_description}</p>
                                                 <ul>
                                                     <li>Any Product types that You want - Simple, Configurable</li>
                                                     <li>Downloadable/Digital Products, Virtual Products</li>
@@ -45,19 +45,19 @@ function SingleTabThree ( props ) {
                         }
                     </SlideToggle>
 
-                    <SlideToggle collapsed={ true } >
+                    <SlideToggle collapsed={true} >
                         {
-                            ( { onToggle, setCollapsibleElement, toggleState } ) => (
+                            ({ onToggle, setCollapsibleElement, toggleState }) => (
                                 <div className="product-collapse-panel">
-                                    <h3 className="product-collapse-title" onClick={ onToggle }>
-                                        <ALink className={ `toggle-button ${toggleState.toLowerCase()}` } href="#">Size Guide</ALink>
+                                    <h3 className="product-collapse-title" onClick={onToggle}>
+                                        <ALink className={`toggle-button ${toggleState.toLowerCase()}`} href="#">Size Guide</ALink>
                                     </h3>
-                                    <div className="product-collapse-body" ref={ setCollapsibleElement }>
+                                    <div className="product-collapse-body" ref={setCollapsibleElement}>
                                         <div className="collapse-body-wrapper pl-0">
                                             <div className="product-size-content">
                                                 <div className="row">
                                                     <div className="col-md-4">
-                                                        <img src="images/products/single/body-shape.png" alt="body shape" width="217" height="398" />
+                                                        <img src="/images/products/single/body-shape.png" alt="body shape" width="217" height="398" />
                                                     </div>
 
                                                     <div className="col-md-8">
@@ -119,15 +119,15 @@ function SingleTabThree ( props ) {
                         }
                     </SlideToggle>
 
-                    <SlideToggle collapsed={ true } >
+                    <SlideToggle collapsed={true} >
                         {
-                            ( { onToggle, setCollapsibleElement, toggleState } ) => (
+                            ({ onToggle, setCollapsibleElement, toggleState }) => (
                                 <div className="product-collapse-panel">
-                                    <h3 className="product-collapse-title" onClick={ onToggle }>
-                                        <ALink className={ `toggle-button ${toggleState.toLowerCase()}` } href="#">Reviews ({ product.reviews })</ALink>
+                                    <h3 className="product-collapse-title" onClick={onToggle}>
+                                        <ALink className={`toggle-button ${toggleState.toLowerCase()}`} href="#">Reviews ({product.reviews})</ALink>
                                     </h3>
 
-                                    <div className="product-collapse-body" ref={ setCollapsibleElement }>
+                                    <div className="product-collapse-body" ref={setCollapsibleElement}>
                                         <div className="collapse-body-wrapper pl-0">
                                             <div className="product-reviews-content">
                                                 {
@@ -138,7 +138,7 @@ function SingleTabThree ( props ) {
                                                             <div className="comment-list">
                                                                 <div className="comments">
                                                                     <figure className="img-thumbnail">
-                                                                        <img src="images/blog/author.jpg" alt="author" width="80"
+                                                                        <img src="/images/blog/author.jpg" alt="author" width="80"
                                                                             height="80" />
                                                                     </figure>
 
@@ -148,14 +148,14 @@ function SingleTabThree ( props ) {
 
                                                                             <div className="ratings-container float-sm-right">
                                                                                 <div className="product-ratings">
-                                                                                    <span className="ratings" style={ { width: `${20 * product.ratings}%` } }></span>
-                                                                                    <span className="tooltiptext tooltip-top">{ product.ratings.toFixed( 2 ) }</span>
+                                                                                    <span className="ratings" style={{ width: `${20 * product.ratings}%` }}></span>
+                                                                                    <span className="tooltiptext tooltip-top">{product.ratings.toFixed(2)}</span>
                                                                                 </div>
                                                                             </div>
 
                                                                             <span className="comment-by">
                                                                                 <strong>Joe Doe</strong> – April 12, 2018
-                                                        </span>
+                                                                            </span>
                                                                         </div>
 
                                                                         <div className="comment-content">
@@ -182,11 +182,11 @@ function SingleTabThree ( props ) {
                                                             <div className="rating-form">
                                                                 <label htmlFor="rating">Your rating <span className="required">*</span></label>
                                                                 <span className="rating-stars">
-                                                                    <a className="star-1" href="#" onClick={ activeHandler }>1</a>
-                                                                    <a className="star-2" href="#" onClick={ activeHandler }>2</a>
-                                                                    <a className="star-3" href="#" onClick={ activeHandler }>3</a>
-                                                                    <a className="star-4" href="#" onClick={ activeHandler }>4</a>
-                                                                    <a className="star-5" href="#" onClick={ activeHandler }>5</a>
+                                                                    <a className="star-1" href="#" onClick={activeHandler}>1</a>
+                                                                    <a className="star-2" href="#" onClick={activeHandler}>2</a>
+                                                                    <a className="star-3" href="#" onClick={activeHandler}>3</a>
+                                                                    <a className="star-4" href="#" onClick={activeHandler}>4</a>
+                                                                    <a className="star-5" href="#" onClick={activeHandler}>5</a>
                                                                 </span>
                                                             </div>
 
@@ -216,8 +216,8 @@ function SingleTabThree ( props ) {
                                                                         <input type="checkbox" className="custom-control-input"
                                                                             id="save-name" />
                                                                         <label className="custom-control-label mb-0" htmlFor="save-name">Save my
-                                                                        name, email, and website in this browser for the next time I
-														comment.</label>
+                                                                            name, email, and website in this browser for the next time I
+                                                                            comment.</label>
                                                                     </div>
                                                                 </div>
                                                             </div>

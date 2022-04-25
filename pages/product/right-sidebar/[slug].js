@@ -11,7 +11,7 @@ import ProductSidebarTwo from "../../../components/partials/product/sidebars/sid
 import absoluteUrl from "next-absolute-url";
 import qs from "qs";
 
-function ProductRightSidebar({ slug, data, loading }) {
+function ProductRightSidebar({slug, data, loading}) {
   if (!slug || loading)
     return (
       <div className="loading-overlay">
@@ -50,7 +50,7 @@ function ProductRightSidebar({ slug, data, loading }) {
                     <ALink
                       href={{
                         pathname: "/shop",
-                        query: { category: item.slug },
+                        query: {category: item.slug},
                       }}
                     >
                       {item.name}
@@ -99,8 +99,8 @@ function ProductRightSidebar({ slug, data, loading }) {
 
 export default ProductRightSidebar;
 export async function getServerSideProps(ctx) {
-  const { origin } = absoluteUrl(ctx.req);
-  const { slug } = ctx.query;
+  const {origin} = absoluteUrl(ctx.req);
+  const {slug} = ctx.query;
   const params = qs.stringify({
     demo: 12,
     slug: slug,

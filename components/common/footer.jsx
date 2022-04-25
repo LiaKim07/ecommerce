@@ -2,7 +2,7 @@ import React from 'react';
 
 import ALink from "./ALink";
 
-function Footer () {
+function Footer() {
     return (
         <footer className="footer bg-dark">
             <div className="footer-middle">
@@ -14,10 +14,10 @@ function Footer () {
                                 <ul className="contact-info">
                                     <li>
                                         <span className="contact-info-label">Address:</span>1234 Street Name, City, US
-        							</li>
+                                    </li>
                                     <li>
                                         <span className="contact-info-label">Phone:</span><ALink href="tel:">(123)
-        									456-7890</ALink>
+                                            456-7890</ALink>
                                     </li>
                                     <li>
                                         <span className="contact-info-label">Email:</span>
@@ -25,8 +25,8 @@ function Footer () {
                                     </li>
                                     <li>
                                         <span className="contact-info-label">Working Days/Hours:</span>
-        								Mon - Sun / 9:00 AM - 8:00 PM
-        							</li>
+                                        Mon - Sun / 9:00 AM - 8:00 PM
+                                    </li>
                                 </ul>
                                 <div className="social-icons">
                                     <ALink href="#" className="social-icon social-facebook icon-facebook"
@@ -63,13 +63,13 @@ function Footer () {
                                 <h4 className="widget-title">Popular Tags</h4>
 
                                 <div className="tagcloud">
-                                    <ALink href={ { pathname: "/shop", query: { tag: "clothes" } } } scroll={ false }>Clothes</ALink>
-                                    <ALink href={ { pathname: "/shop", query: { tag: "fashion" } } } scroll={ false }>Fashion</ALink>
-                                    <ALink href={ { pathname: "/shop", query: { tag: "hub" } } } scroll={ false }>Hub</ALink>
-                                    <ALink href={ { pathname: "/shop", query: { tag: "shirt" } } } scroll={ false }>Shirt</ALink>
-                                    <ALink href={ { pathname: "/shop", query: { tag: "skirt" } } } scroll={ false }>Skirt</ALink>
-                                    <ALink href={ { pathname: "/shop", query: { tag: "sports" } } } scroll={ false }>Sports</ALink>
-                                    <ALink href={ { pathname: "/shop", query: { tag: "sweater" } } } scroll={ false }>Sweater</ALink>
+                                    <ALink href={{ pathname: "/shop", query: { tag: "clothes" } }} scroll={false}>Clothes</ALink>
+                                    <ALink href={{ pathname: "/shop", query: { tag: "fashion" } }} scroll={false}>Fashion</ALink>
+                                    <ALink href={{ pathname: "/shop", query: { tag: "hub" } }} scroll={false}>Hub</ALink>
+                                    <ALink href={{ pathname: "/shop", query: { tag: "shirt" } }} scroll={false}>Shirt</ALink>
+                                    <ALink href={{ pathname: "/shop", query: { tag: "skirt" } }} scroll={false}>Skirt</ALink>
+                                    <ALink href={{ pathname: "/shop", query: { tag: "sports" } }} scroll={false}>Sports</ALink>
+                                    <ALink href={{ pathname: "/shop", query: { tag: "sweater" } }} scroll={false}>Sweater</ALink>
                                 </div>
                             </div>
                         </div>
@@ -98,10 +98,10 @@ function Footer () {
 
                         <div className="footer-right ml-auto mt-1 mt-sm-0">
                             <div className="payment-icons">
-                                <span className="payment-icon visa" style={ { backgroundImage: "url(images/payments/payment-visa.svg)" } }></span>
-                                <span className="payment-icon paypal" style={ { backgroundImage: "url(images/payments/payment-paypal.svg)" } }></span>
-                                <span className="payment-icon stripe" style={ { backgroundImage: "url(images/payments/payment-stripe.png)" } }></span>
-                                <span className="payment-icon verisign" style={ { backgroundImage: "url(images/payments/payment-verisign.svg)" } }></span>
+                                <span className="payment-icon visa" style={{ backgroundImage: "url(/images/payments/payment-visa.svg)" }}></span>
+                                <span className="payment-icon paypal" style={{ backgroundImage: "url(/images/payments/payment-paypal.svg)" }}></span>
+                                <span className="payment-icon stripe" style={{ backgroundImage: "url(/images/payments/payment-stripe.png)" }}></span>
+                                <span className="payment-icon verisign" style={{ backgroundImage: "url(/images/payments/payment-verisign.svg)" }}></span>
                             </div>
                         </div>
                     </div>
@@ -111,4 +111,4 @@ function Footer () {
     );
 }
 
-export default React.memo( Footer );
+export default React.memo(Footer);
